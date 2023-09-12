@@ -92,14 +92,12 @@ void ultrapassagem(int *corrida, int idUltra, int tamanho) {
 }
 
 void ordenar(int *corrida, Corredor *corredor, Corredor *corredorReal, int tamanho) {
-    int i, j;
+    int i, j = 0;
 
     for(i = 0; i < tamanho; i++) {
       corredorReal[i].idCarro = corrida[i];
-      for(j = 0; j < tamanho; j++) {
-        if(corredorReal[i].idCarro == corredor[j].idCarro){
+      if(corredorReal[i].idCarro == corredor[j].idCarro){
            strcpy(corredorReal[i].nomeCarro, corredor[j].nomeCarro);
-        }
       }
     }
 }
